@@ -6,7 +6,9 @@ class SimpleReport:
 
     @staticmethod
     def generate(report):
-        manufacturing_date = min([product["data_de_fabricacao"] for product in report])
+        manufacturing_date = min(
+            [product["data_de_fabricacao"] for product in report]
+            )
         expiration_date = min([
                 product["data_de_validade"]
                 for product in report
